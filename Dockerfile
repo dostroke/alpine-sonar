@@ -10,7 +10,7 @@ ENV JAVA_HOME=/usr/lib/jvm/java-8-oracle \
     SONARQUBE_HOME=/opt/sonarqube \
     SONAR_JDBC_USR=sonar \
     SONAR_JDBC_PWD=sonar \
-    SONAR_JDBC_URL=jdbc://mysql:3306/sonar
+    SONAR_JDBC_URL=jdbc:mysql://mysql:3306/sonar?useUnicode=true&amp;characterEncoding=utf8
 
 RUN apk add --no-cache --virtual=build-dependencies wget ca-certificates unzip && \
     apk add --no-cache gnupg libressl
